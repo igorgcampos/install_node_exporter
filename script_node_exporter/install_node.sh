@@ -1,6 +1,9 @@
 #! /bin/bash
+##Entra na pasta "TMP"##
 cd /tmp
+##Baixa o node_exporter
 curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+##Descompacta o arquivo##
 tar -xvf node_exporter*.tar.gz
 mv node_exporter-1.3.1.linux-amd64/node_exporter /usr/local/bin/
 useradd -rs /bin/false node_exporter
